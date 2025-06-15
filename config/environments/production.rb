@@ -6,9 +6,10 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.enable_reloading = false
   
-  # Enable asset compilation in production
+  # Disable asset precompilation and serve static files
   config.assets.compile = true
-  config.assets.digest = true
+  config.assets.digest = false
+  config.public_file_server.enabled = true
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
@@ -24,8 +25,8 @@ Rails.application.configure do
   # key such as config/credentials/production.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true
 
-  # Disable serving static files from `public/`, relying on NGINX/Apache to do so instead.
-  # config.public_file_server.enabled = false
+  # Enable serving static files from `public/` directory.
+  config.public_file_server.enabled = true
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
