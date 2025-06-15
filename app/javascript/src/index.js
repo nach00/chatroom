@@ -6,25 +6,29 @@ import {
 } from "../lib/requests.js";
 
 $(document).ready(function () {
-  indexChats(function (response) {
-    var htmlString = response.chats.map(function(chat) {
-      return `
-        <li class="py-4">
-          <div class="flex space-x-3">
-            <div class="flex-1 space-y-1">
-              <div class="flex items-center justify-between">
-                <h3 class="text-sm font-medium">${chat.name}</h3>
-                <p class="text-sm text-gray-500">${chat.ago}</p>
-              </div>
-              <p class="text-sm text-gray-500">${chat.message}</p>
+  function loadChats() {
+    indexChats(function (response) {
+      var htmlString = response.chats.map(function(chat) {
+        return `
+          <li class="chat-message">
+            <div class="flex items-center justify-between">
+              <div class="chat-name">${chat.name}</div>
+              <div class="chat-time">${chat.ago}</div>
             </div>
-          </div>
-        </li>
-      `;
-    });
+            <div class="chat-text">${chat.message}</div>
+          </li>
+        `;
+      });
 
-    $("#chats").html(htmlString);
-  });
+      $("#chats").html(htmlString);
+    });
+  }
+
+  // Load chats initially
+  loadChats();
+
+  // Refresh chats every 5 seconds
+  setInterval(loadChats, 5000);
 
   $("#new-chat-form").on("submit", function (event) {
     event.preventDefault();
@@ -32,8 +36,12 @@ $(document).ready(function () {
     var message = $("#chat-message").val();
     var name = $("#chat-name").val();
 
-    postChat(message, name);
-
-    $("#chat-message").val("");
+    if (message.trim() && name.trim()) {
+      postChat(message, name);
+      $("#chat-message").val("");
+      
+      // Reload chats after posting
+      setTimeout(loadChats, 500);
+    }
   });
 });

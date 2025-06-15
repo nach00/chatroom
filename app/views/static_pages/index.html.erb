@@ -1,36 +1,32 @@
 <%= javascript_pack_tag 'index', 'data-turbolinks-track': 'reload' %>
 
-<h1 class="text-center mt-4">Live Chatroom</h1>
+<div class="chatroom-container">
+  <h1 class="main-title">LIVE CHATROOM</h1>
+  <p class="subtitle">EXPERIMENTAL COMMUNICATION INTERFACE</p>
 
-<div class="rounded-md bg-blue-50 p-4">
-  <div class="flex">
-    <div class="flex-shrink-0">
-      <!-- Heroicon name: mini/information-circle -->
-      <svg class="h-5 w-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd" d="M19 10.5a8.5 8.5 0 11-17 0 8.5 8.5 0 0117 0zM8.25 9.75A.75.75 0 019 9h.253a1.75 1.75 0 011.709 2.13l-.46 2.066a.25.25 0 00.245.304H11a.75.75 0 010 1.5h-.253a1.75 1.75 0 01-1.709-2.13l.46-2.066a.25.25 0 00-.245-.304H9a.75.75 0 01-.75-.75zM10 7a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
-      </svg>
-    </div>
-    <div class="ml-3 flex-1 md:flex md:justify-between">
-      <p class="text-sm text-blue-700">Messages are automatically deleted in 60 minutes.</p>
-    </div>
+  <div class="notice-box">
+    <p class="notice-text">Messages auto-destruct in 60 minutes / Temporary digital artifacts</p>
+  </div>
+
+  <div class="chat-form">
+    <form action="#" id="new-chat-form">
+      <div style="margin-bottom: 2rem;">
+        <label for="chat-name" class="form-label">User Identity</label>
+        <input required type="text" id="chat-name" class="form-input" placeholder="ENTER NAME">
+      </div>
+
+      <div style="margin-bottom: 3rem;">
+        <label for="chat-message" class="form-label">Message Content</label>
+        <input required type="text" id="chat-message" class="form-input" placeholder="TYPE MESSAGE">
+      </div>
+      
+      <div class="flex justify-end">
+        <button type="submit" class="btn-primary">TRANSMIT</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="chat-messages">
+    <ul role="list" id="chats"></ul>
   </div>
 </div>
-
-<form action="#" id="new-chat-form" class="mt-4">
-  <div>
-    <div class="relative rounded-md border border-gray-300 px-3 py-2 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
-      <label for="name" class="absolute -top-2 left-2 -mt-px inline-block bg-white px-1 text-xs font-medium text-gray-900">Name</label>
-      <input required type="text" name="name" id="chat-name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="Your Name">
-    </div>
-
-    <div class="relative rounded-md border border-gray-300 px-3 py-2 mt-4 shadow-sm focus-within:border-indigo-600 focus-within:ring-1 focus-within:ring-indigo-600">
-      <label for="name" class="absolute -top-2 left-2 -mt-px inline-block bg-white px-1 text-xs font-medium text-gray-900">Message</label>
-      <input required type="text" name="name" id="chat-message" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="Your Message">
-    </div>
-  </div>
-  <div class="mt-2 flex justify-end">
-    <button type="submit" class="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Post</button>
-  </div>
-</form>
-
-<ul role="list" class="divide-y divide-gray-200" id="chats" />

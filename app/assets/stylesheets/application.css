@@ -13,3 +13,374 @@
  *= require_tree .
  *= require_self
  */
+
+/* Basic Tailwind-style utilities for chatroom */
+.mx-auto { margin-left: auto; margin-right: auto; }
+.max-w-7xl { max-width: 80rem; }
+.max-w-3xl { max-width: 48rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.p-4 { padding: 1rem; }
+.p-0 { padding: 0; }
+.mt-4 { margin-top: 1rem; }
+.mt-2 { margin-top: 0.5rem; }
+.ml-3 { margin-left: 0.75rem; }
+.text-center { text-align: center; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.font-medium { font-weight: 500; }
+.text-gray-900 { color: rgb(17 24 39); }
+.text-gray-500 { color: rgb(107 114 128); }
+.text-blue-700 { color: rgb(29 78 216); }
+.text-blue-400 { color: rgb(96 165 250); }
+.text-white { color: rgb(255 255 255); }
+.bg-blue-50 { background-color: rgb(239 246 255); }
+.bg-indigo-600 { background-color: rgb(79 70 229); }
+.bg-indigo-700:hover { background-color: rgb(67 56 202); }
+.bg-white { background-color: rgb(255 255 255); }
+.border { border-width: 1px; }
+.border-0 { border-width: 0px; }
+.border-gray-300 { border-color: rgb(209 213 219); }
+.border-transparent { border-color: transparent; }
+.border-indigo-600 { border-color: rgb(79 70 229); }
+.rounded-md { border-radius: 0.375rem; }
+.shadow-sm { box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); }
+.flex { display: flex; }
+.block { display: block; }
+.inline-flex { display: inline-flex; }
+.w-full { width: 100%; }
+.h-5 { height: 1.25rem; }
+.w-5 { width: 1.25rem; }
+.flex-1 { flex: 1 1 0%; }
+.flex-shrink-0 { flex-shrink: 0; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-end { justify-content: flex-end; }
+.space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem; }
+.space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem; }
+.divide-y > :not([hidden]) ~ :not([hidden]) { border-top-width: 1px; }
+.divide-gray-200 > :not([hidden]) ~ :not([hidden]) { border-color: rgb(229 231 235); }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.-top-2 { top: -0.5rem; }
+.left-2 { left: 0.5rem; }
+.-mt-px { margin-top: -1px; }
+.focus\:ring-0:focus { box-shadow: none; }
+.focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; }
+.focus\:ring-2:focus { box-shadow: 0 0 0 3px; }
+.focus\:ring-indigo-500:focus { box-shadow: 0 0 0 3px rgb(99 102 241 / 0.5); }
+.focus\:ring-offset-2:focus { box-shadow: 0 0 0 2px #fff, 0 0 0 4px; }
+.focus-within\:border-indigo-600:focus-within { border-color: rgb(79 70 229); }
+.focus-within\:ring-1:focus-within { box-shadow: 0 0 0 1px; }
+.focus-within\:ring-indigo-600:focus-within { box-shadow: 0 0 0 1px rgb(79 70 229); }
+.hover\:bg-indigo-700:hover { background-color: rgb(67 56 202); }
+.placeholder-gray-500::placeholder { color: rgb(107 114 128); }
+
+/* VIRGIL ABLOH INSPIRED CHATROOM STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body { 
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.chatroom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* DECONSTRUCTED TYPOGRAPHY */
+.main-title {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  position: relative;
+  text-shadow: 2px 2px 0px #ff6b35;
+}
+
+.main-title::before {
+  content: 'LIVE CHATROOM';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  color: #ff6b35;
+  z-index: -1;
+}
+
+.main-title::after {
+  content: '01';
+  position: absolute;
+  top: -20px;
+  right: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666666;
+  transform: rotate(-5deg);
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #999999;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+/* INDUSTRIAL ELEMENTS */
+.chat-form {
+  background: transparent;
+  border: 2px solid #333333;
+  border-radius: 0;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.chat-form::before {
+  content: 'INPUT';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: #000000;
+  padding: 0 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #ff6b35;
+}
+
+.chat-messages {
+  background: transparent;
+  border: 2px solid #333333;
+  border-radius: 0;
+  padding: 2rem;
+  min-height: 400px;
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.chat-messages::before {
+  content: 'OUTPUT';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: #000000;
+  padding: 0 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #ff6b35;
+}
+
+/* DECONSTRUCTED MESSAGES */
+.chat-message {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #333333;
+  position: relative;
+  margin-left: 2rem;
+}
+
+.chat-message::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #ff6b35;
+}
+
+.chat-message:last-child {
+  border-bottom: none;
+}
+
+.chat-name {
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.chat-name::after {
+  content: '"';
+  color: #ff6b35;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.chat-text {
+  color: #cccccc;
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+.chat-time {
+  color: #666666;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: absolute;
+  right: 0;
+  top: 1.5rem;
+}
+
+/* OFF-WHITE INSPIRED BUTTON */
+.btn-primary {
+  background-color: #ff6b35;
+  color: #000000;
+  padding: 1rem 2rem;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: 'POST';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.6rem;
+  color: #000000;
+  font-weight: 400;
+}
+
+.btn-primary:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* FORM STYLING */
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #333333;
+  border-radius: 0;
+  font-size: 1rem;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #ff6b35;
+  background: rgba(255, 107, 53, 0.05);
+}
+
+.form-input::placeholder {
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.form-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+.form-label::after {
+  content: ':';
+  color: #ff6b35;
+  margin-left: 0.25rem;
+}
+
+/* NOTICE STYLING */
+.notice-box {
+  border: 2px solid #ff6b35;
+  background: rgba(255, 107, 53, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.notice-box::before {
+  content: 'NOTICE';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: #000000;
+  padding: 0 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #ff6b35;
+}
+
+.notice-text {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ARCHITECTURAL ELEMENTS */
+.chatroom-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b35 0%, #ffffff 50%, #ff6b35 100%);
+}
+
+.chatroom-container::after {
+  content: 'PROTOTYPE 01 / EXPERIMENTAL INTERFACE';
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 0.6rem;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+}

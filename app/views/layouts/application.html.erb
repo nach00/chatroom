@@ -9,19 +9,10 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
-
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
-      <div class="mx-auto max-w-3xl">
-        <!-- Content goes here -->
-        <%= yield %>
-      </div>
-    </div>
-
+    <%= yield %>
   </body>
 </html>
