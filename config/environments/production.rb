@@ -8,6 +8,7 @@ Rails.application.configure do
   
   # Skip asset precompilation errors
   config.assets.compile = true
+  config.assets.digest = false
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers

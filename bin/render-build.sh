@@ -3,6 +3,6 @@
 set -o errexit
 
 bundle install
-bundle exec rake assets:precompile
-bundle exec rake assets:clean
+# Skip asset precompilation for now
+echo "Skipping asset precompilation due to Node.js compatibility issues"
 bundle exec rake db:migrate
