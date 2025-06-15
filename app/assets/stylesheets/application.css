@@ -31,22 +31,22 @@
 .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
 .text-xs { font-size: 0.75rem; line-height: 1rem; }
 .font-medium { font-weight: 500; }
-.text-gray-900 { color: rgb(17 24 39); }
-.text-gray-500 { color: rgb(107 114 128); }
-.text-blue-700 { color: rgb(29 78 216); }
-.text-blue-400 { color: rgb(96 165 250); }
-.text-white { color: rgb(255 255 255); }
-.bg-blue-50 { background-color: rgb(239 246 255); }
-.bg-indigo-600 { background-color: rgb(79 70 229); }
-.bg-indigo-700:hover { background-color: rgb(67 56 202); }
-.bg-white { background-color: rgb(255 255 255); }
+.text-gray-900 { color: rgb(17, 24, 39); }
+.text-gray-500 { color: rgb(107, 114, 128); }
+.text-blue-700 { color: rgb(29, 78, 216); }
+.text-blue-400 { color: rgb(96, 165, 250); }
+.text-white { color: rgb(255, 255, 255); }
+.bg-blue-50 { background-color: rgb(239, 246, 255); }
+.bg-indigo-600 { background-color: rgb(79, 70, 229); }
+.bg-indigo-700:hover { background-color: rgb(67, 56, 202); }
+.bg-white { background-color: rgb(255, 255, 255); }
 .border { border-width: 1px; }
 .border-0 { border-width: 0px; }
-.border-gray-300 { border-color: rgb(209 213 219); }
+.border-gray-300 { border-color: rgb(209, 213, 219); }
 .border-transparent { border-color: transparent; }
-.border-indigo-600 { border-color: rgb(79 70 229); }
+.border-indigo-600 { border-color: rgb(79, 70, 229); }
 .rounded-md { border-radius: 0.375rem; }
-.shadow-sm { box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); }
+.shadow-sm { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); }
 .flex { display: flex; }
 .block { display: block; }
 .inline-flex { display: inline-flex; }
@@ -61,7 +61,7 @@
 .space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.75rem; }
 .space-y-1 > :not([hidden]) ~ :not([hidden]) { margin-top: 0.25rem; }
 .divide-y > :not([hidden]) ~ :not([hidden]) { border-top-width: 1px; }
-.divide-gray-200 > :not([hidden]) ~ :not([hidden]) { border-color: rgb(229 231 235); }
+.divide-gray-200 > :not([hidden]) ~ :not([hidden]) { border-color: rgb(229, 231, 235); }
 .relative { position: relative; }
 .absolute { position: absolute; }
 .-top-2 { top: -0.5rem; }
@@ -70,13 +70,13 @@
 .focus\:ring-0:focus { box-shadow: none; }
 .focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; }
 .focus\:ring-2:focus { box-shadow: 0 0 0 3px; }
-.focus\:ring-indigo-500:focus { box-shadow: 0 0 0 3px rgb(99 102 241 / 0.5); }
+.focus\:ring-indigo-500:focus { box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.5); }
 .focus\:ring-offset-2:focus { box-shadow: 0 0 0 2px #fff, 0 0 0 4px; }
-.focus-within\:border-indigo-600:focus-within { border-color: rgb(79 70 229); }
+.focus-within\:border-indigo-600:focus-within { border-color: rgb(79, 70, 229); }
 .focus-within\:ring-1:focus-within { box-shadow: 0 0 0 1px; }
-.focus-within\:ring-indigo-600:focus-within { box-shadow: 0 0 0 1px rgb(79 70 229); }
-.hover\:bg-indigo-700:hover { background-color: rgb(67 56 202); }
-.placeholder-gray-500::placeholder { color: rgb(107 114 128); }
+.focus-within\:ring-indigo-600:focus-within { box-shadow: 0 0 0 1px rgb(79, 70, 229); }
+.hover\:bg-indigo-700:hover { background-color: rgb(67, 56, 202); }
+.placeholder-gray-500::placeholder { color: rgb(107, 114, 128); }
 
 /* VIRGIL ABLOH INSPIRED CHATROOM STYLES */
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap);
