@@ -79,7 +79,7 @@
 .placeholder-gray-500::placeholder { color: rgb(107 114 128); }
 
 /* VIRGIL ABLOH INSPIRED CHATROOM STYLES */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap);
 
 body { 
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
