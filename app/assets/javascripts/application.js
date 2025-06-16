@@ -1,9 +1,19 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+// Force asset recompilation - updated API endpoints
 
 // Chat functionality
 $(document).ready(function() {
+  // Setup CSRF token for all AJAX requests
+  $.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+      if (!(/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type)) && !this.crossDomain) {
+        xhr.setRequestHeader("X-CSRF-Token", $('meta[name=csrf-token]').attr('content'));
+      }
+    }
+  });
+
   const chatForm = document.getElementById('chat-form');
   const nameInput = document.getElementById('name-input');
   const messageInput = document.getElementById('message-input');
