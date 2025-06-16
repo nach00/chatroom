@@ -1,4 +1,4 @@
-<%= javascript_pack_tag 'index', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
 <div class="chatroom-container">
   <h1 class="main-title">LIVE CHATROOM</h1>
@@ -9,15 +9,15 @@
   </div>
 
   <div class="chat-form">
-    <form action="#" id="new-chat-form">
+    <form action="#" id="chat-form">
       <div style="margin-bottom: 2rem;">
         <label for="chat-name" class="form-label">User Identity</label>
-        <input required type="text" id="chat-name" class="form-input" placeholder="ENTER NAME">
+        <input required type="text" id="name-input" class="form-input" placeholder="ENTER NAME">
       </div>
 
       <div style="margin-bottom: 3rem;">
         <label for="chat-message" class="form-label">Message Content</label>
-        <input required type="text" id="chat-message" class="form-input" placeholder="TYPE MESSAGE">
+        <input required type="text" id="message-input" class="form-input" placeholder="TYPE MESSAGE">
       </div>
       
       <div class="flex justify-end">
