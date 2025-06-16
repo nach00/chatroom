@@ -53,7 +53,7 @@ $(document).ready(function() {
   function indexChats(callback) {
     $.ajax({
       type: 'GET',
-      url: '/chats',
+      url: '/api/chats',
       dataType: 'json',
       success: callback,
       error: function(xhr, status, error) {
@@ -65,7 +65,7 @@ $(document).ready(function() {
   function createChat(name, message, callback) {
     $.ajax({
       type: 'POST',
-      url: '/chats',
+      url: '/api/chats',
       data: {
         chat: {
           name: name,
